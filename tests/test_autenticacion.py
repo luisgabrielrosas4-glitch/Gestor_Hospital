@@ -18,7 +18,7 @@ import src.servidor as api
 DATA = Path(__file__).resolve().parents[1] / 'data' / 'citas_ficticias.json'
 
 
-class AutenticacionTests(unittest.TestCase):
+class BaseHospitalTest:
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.db = Path(self.temp.name) / 'test.sqlite3'
@@ -28,6 +28,7 @@ class AutenticacionTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
+class AutenticacionTests(BaseHospitalTest, unittest.TestCase):
     def test_cinco_cuentas_diferentes(self):
         self.assertEqual({u['rol'] for u in self.auth.usuarios()}, {
             'administrador', 'doctor', 'paciente', 'recepcion', 'personal_autorizado'})
@@ -82,7 +83,7 @@ class AutenticacionTests(unittest.TestCase):
         self.assertEqual(len(self.service.listar_citas()),1)
 
 
-class APIAutorizacionTests(AutenticacionTests):
+class APIAutorizacionTests(BaseHospitalTest, unittest.TestCase):
     def setUp(self):
         super().setUp()
         self.old_svc, self.old_auth = api.SERVICE,api.AUTH

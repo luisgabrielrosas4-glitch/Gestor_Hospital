@@ -11,7 +11,7 @@ NOVEDADES
 - Personal autorizado: lectura de horarios sin datos de pacientes.
 - Admin: registrar médicos, consultar usuarios y resumen.
 - UML y PDF actualizados a partir del reporte original de 25 páginas.
-- 62 pruebas automáticas de lógica, API y permisos pasadas localmente.
+- 53 pruebas automáticas de lógica, API y permisos pasadas localmente.
 
 LIMITACIONES
 Solo para laboratorios con datos ficticios; sin seguridad clínica de producción.

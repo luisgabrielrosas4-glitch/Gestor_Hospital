@@ -30,7 +30,7 @@ Entra como `consulta`; consulta médicos y horarios libres. No hay tabla de cita
 
 `python -m unittest discover -s tests -v`
 
-**62 pruebas automatizadas** (la prueba visual completa debe repetirse en la PC de laboratorio). No se ofrecen como implementados: reprogramación, edición/eliminación de cuentas, notificaciones, ausencias del doctor ni expediente médico.
+**53 pruebas automatizadas** (la prueba visual completa debe repetirse en la PC de laboratorio). No se ofrecen como implementados: reprogramación, edición/eliminación de cuentas, notificaciones, ausencias del doctor ni expediente médico.
 
 ## Datos de prueba
 

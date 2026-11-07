@@ -56,7 +56,7 @@ El PDF original enumera cinco tipos de actores. **“Personal autorizado” es u
 python -m unittest discover -s tests -v
 ```
 
-**62 pruebas aprobadas en la revisión local**, que cubren la funcionalidad del primer parcial, persistencia, concurrencia, autenticación, acceso prohibido, privacidad por rol y API HTTP. Para los tres casos aleatorios de laboratorio, utiliza también `docs/guion_laboratorio.md`.
+**53 pruebas aprobadas en la revisión local**, que cubren la funcionalidad del primer parcial, persistencia, concurrencia, autenticación, acceso prohibido, privacidad por rol y API HTTP. Para los tres casos aleatorios de laboratorio, utiliza también `docs/guion_laboratorio.md`.
 
 La **prueba visual integral en navegador no pudo finalizarse en el entorno de creación** y debe verificarse en la PC de laboratorio. Las pruebas de red del backend sí se ejecutaron con HTTP real contra un servidor local.
 
