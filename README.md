@@ -90,3 +90,12 @@ El perfil `consulta` corresponde al personal de coordinación: puede ver un dire
 Cuando administración da de baja a un médico, las citas futuras pasan a **Pendiente de reagendar**, sin perder el historial. Recepción o administración puede pulsar **Reagendar** en la agenda y elegir otro médico y horario libre. El folio y paciente se conservan. La cuenta del médico dado de baja queda inactiva hasta una eventual reactivación.
 
 La primera ejecución con una base antigua actualiza el esquema de `citas` para admitir el nuevo estado sin borrar datos. Se recomienda respaldar `data/hospital.sqlite3` antes de actualizar.
+
+## Pantallas por tipo de cuenta
+
+- **Doctor:** muestra exclusivamente las citas vinculadas al consultorio de su cuenta. No se muestran controles para consultar disponibilidad ni registrar ausencias.
+- **Paciente:** abre un calendario mensual con las citas propias, la hora y el médico que atenderá. No puede consultar las citas de otros pacientes.
+- **Recepción y administración:** mantienen la búsqueda y la gestión de citas y médicos.
+- **Personal autorizado:** conserva su vista de consulta del directorio médico.
+
+Cuentas de médicos de ejemplo: `doctora` (MED001), `doctor_carlos` (MED002), `doctora_sofia` (MED003). Las tres usan `Demo2026!`. Al iniciar el servidor, las dos cuentas nuevas también se incorporan a una base SQLite que ya existiera, sin eliminar datos previos.
